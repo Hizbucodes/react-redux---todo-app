@@ -21,7 +21,7 @@ const initialState: HabitState = {
 }
 
 
-const fetchHabits = createAsyncThunk<IHabit[], void>("habits/fetchHabits", async ()=>{
+export const fetchHabits = createAsyncThunk<IHabit[]>("habits/fetchHabits", async ()=>{
     await new Promise((resolve)=> setTimeout(resolve, 1000));
 
     const mockHabits: IHabit[] = [
